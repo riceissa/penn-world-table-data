@@ -26,16 +26,14 @@ cols = {
             "metric": "Number of persons engaged",
             "factor": 1e6,
         },
-        "rgdpe": {"units": "", "metric": ""},
-        "rgdpe": {"units": "", "metric": ""},
-        "rgdpe": {"units": "", "metric": ""},
-        "rgdpe": {"units": "", "metric": ""},
-        "rgdpe": {"units": "", "metric": ""},
-        "rgdpe": {"units": "", "metric": ""},
-        "rgdpe": {"units": "", "metric": ""},
-        "rgdpe": {"units": "", "metric": ""},
-        "rgdpe": {"units": "", "metric": ""},
-        "rgdpe": {"units": "", "metric": ""},
+        "avh": {
+            "units": "Hours",
+            "metric": "Average annual hours worked by persons engaged",
+        },
+        "hc": {
+            "units": "Index",
+            "metric": "Human capital index",
+        },
 }
 
 
@@ -57,7 +55,7 @@ with open("pwt90.csv", newline='') as f:
                     mysql_quote(""),  # data_retrieval_method
                     mysql_quote(cols[col]["metric"]),  # metric
                     mysql_quote(cols[col]["units"]),  # units
-                    mysql_float(row[col]),  # value
+                    mysql_float(row[col], cols[col].get("factor", 1)),  # value
                     mysql_quote(""),  # notes
                 ]) + ")")
                 first = False
