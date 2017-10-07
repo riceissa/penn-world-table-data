@@ -5,7 +5,41 @@ import csv
 from util import *
 
 
-print("""insert into pwt(region, year, database_url,
+cols = {
+        "rgdpe": {
+            "units": "2011 US dollars",
+            "metric": "Expenditure-side real GDP",
+            "factor": 1e6,
+        },
+        "rgdpo": {
+            "units": "2011 US dollars",
+            "metric": "Output-side real GDP",
+            "factor": 1e6,
+        },
+        "pop": {
+            "units": "People",
+            "metric": "Population",
+            "factor": 1e6,
+        },
+        "emp": {
+            "units": "People",
+            "metric": "Number of persons engaged",
+            "factor": 1e6,
+        },
+        "rgdpe": {"units": "", "metric": ""},
+        "rgdpe": {"units": "", "metric": ""},
+        "rgdpe": {"units": "", "metric": ""},
+        "rgdpe": {"units": "", "metric": ""},
+        "rgdpe": {"units": "", "metric": ""},
+        "rgdpe": {"units": "", "metric": ""},
+        "rgdpe": {"units": "", "metric": ""},
+        "rgdpe": {"units": "", "metric": ""},
+        "rgdpe": {"units": "", "metric": ""},
+        "rgdpe": {"units": "", "metric": ""},
+}
+
+
+print("""insert into data(region, year, database_url,
          data_retrieval_method, metric, units, value, notes) values""")
 
 
@@ -14,16 +48,16 @@ with open("pwt90.csv", newline='') as f:
     first = True
 
     for row in reader:
-        for var in sorted(row):
-            if row[var] and var not in ["countrycode", "country", "year", "currency_unit"]:
+        for col in sorted(row):
+            if row[col] and col in cols:
                 print("    " + ("" if first else ",") + "(" + ",".join([
                     mysql_quote(row["country"]),  # region
                     mysql_int(row["year"]),  # year
                     mysql_quote("http://www.rug.nl/ggdc/docs/pwt90.xlsx"),  # database_url
                     mysql_quote(""),  # data_retrieval_method
-                    mysql_quote(var),  # metric
-                    mysql_quote(""),  # units
-                    mysql_float(row[var]),  # value
+                    mysql_quote(cols[col]["metric"]),  # metric
+                    mysql_quote(cols[col]["units"]),  # units
+                    mysql_float(row[col]),  # value
                     mysql_quote(""),  # notes
                 ]) + ")")
                 first = False
