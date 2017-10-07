@@ -34,6 +34,35 @@ cols = {
             "units": "Index",
             "metric": "Human capital index",
         },
+        "ccon": {
+            "units": "2011 international dollar",
+            "metric": "Real consumption of households and government, at current PPPs",
+            "factor": 1e6,
+        },
+        "cda": {
+            "units": "2011 international dollar",
+            "metric": "Real domestic absorption, (real consumption plus investment), at current PPPs",
+            "factor": 1e6,
+        },
+        "cgdpe": {
+            "units": "2011 international dollar",
+            "metric": "Expenditure-side real GDP at current PPPs",
+            "factor": 1e6,
+        },
+        "cgdpo": {
+            "units": "2011 international dollar",
+            "metric": "Output-side real GDP at current PPPs",
+            "factor": 1e6,
+        },
+        "ck": {
+            "units": "2011 international dollar",
+            "metric": "Capital stock at current PPPs",
+            "factor": 1e6,
+        },
+        "ctfp": {
+            "units": "US=1",
+            "metric": "TFP level at current PPPs",
+        },
 }
 
 
