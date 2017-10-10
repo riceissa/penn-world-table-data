@@ -60,8 +60,8 @@ cols = {
             "factor": 1e6,
         },
         "ctfp": {
-            "units": "US=1",
-            "metric": "TFP level at current PPPs",
+            "units": "Unitless",
+            "metric": "TFP level at current PPPs (USA=1)",
         },
         "cwtfp": {
             "units": "Unitless",
@@ -130,7 +130,6 @@ cols = {
         "csh_g": {
             "units": "Unitless",
             "metric": "Share of government consumption at current PPPs",
-            "factor": 1e6,
         },
         "csh_x": {
             "units": "Unitless",

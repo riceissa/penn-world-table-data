@@ -7,12 +7,12 @@ from util import *
 
 cols = {
         "rgdpe": {
-            "units": "2011 international dollars",
+            "units": "2005 international dollars",
             "metric": "Expenditure-side real GDP at chained PPPs",
             "factor": 1e6,
         },
         "rgdpo": {
-            "units": "2011 international dollars",
+            "units": "2005 international dollars",
             "metric": "Output-side real GDP at chained PPPs",
             "factor": 1e6,
         },
@@ -35,65 +35,65 @@ cols = {
             "metric": "Human capital index, based on years of schooling and returns to education",
         },
         "ccon": {
-            "units": "2011 international dollar",
+            "units": "2005 international dollar",
             "metric": "Real consumption of households and government, at current PPPs",
             "factor": 1e6,
         },
         "cda": {
-            "units": "2011 international dollar",
+            "units": "2005 international dollar",
             "metric": "Real domestic absorption, (real consumption plus investment), at current PPPs",
             "factor": 1e6,
         },
         "cgdpe": {
-            "units": "2011 international dollar",
+            "units": "2005 international dollar",
             "metric": "Expenditure-side real GDP at current PPPs",
             "factor": 1e6,
         },
         "cgdpo": {
-            "units": "2011 international dollar",
+            "units": "2005 international dollar",
             "metric": "Output-side real GDP at current PPPs",
             "factor": 1e6,
         },
         "ck": {
-            "units": "2011 international dollar",
+            "units": "2005 international dollar",
             "metric": "Capital stock at current PPPs",
             "factor": 1e6,
         },
         "ctfp": {
-            "units": "US=1",
-            "metric": "TFP level at current PPPs",
+            "units": "Unitless",
+            "metric": "TFP level at current PPPs (USA=1)",
         },
         "cwtfp": {
             "units": "Unitless",
             "metric": "Welfare-relevant TFP levels at current PPPs (USA=1)",
         },
         "rgdpna": {
-            "units": "2011 international dollar",
-            "metric": "Real GDP at constant 2011 national prices",
+            "units": "2005 international dollar",
+            "metric": "Real GDP at constant 2005 national prices",
             "factor": 1e6,
         },
         "rconna": {
-            "units": "2011 international dollar",
-            "metric": "Real consumption at constant 2011 national prices",
+            "units": "2005 international dollar",
+            "metric": "Real consumption at constant 2005 national prices",
             "factor": 1e6,
         },
         "rdana": {
-            "units": "2011 international dollar",
-            "metric": "Real domestic absorption at constant 2011 national prices",
+            "units": "2005 international dollar",
+            "metric": "Real domestic absorption at constant 2005 national prices",
             "factor": 1e6,
         },
         "rkna": {
-            "units": "2011 international dollar",
-            "metric": "Capital stock at constant 2011 national prices",
+            "units": "2005 international dollar",
+            "metric": "Capital stock at constant 2005 national prices",
             "factor": 1e6,
         },
         "rtfpna": {
             "units": "Unitless",
-            "metric": "TFP at constant national prices (2011=1)",
+            "metric": "TFP at constant national prices (2005=1)",
         },
         "rwtfpna": {
             "units": "Unitless",
-            "metric": "Welfare-relevant TFP at constant national prices (2011=1)",
+            "metric": "Welfare-relevant TFP at constant national prices (2005=1)",
         },
         "labsh": {
             "units": "Unitless",
@@ -109,15 +109,15 @@ cols = {
         },
         "pl_con": {
             "units": "Unitless",
-            "metric": "Price level of CCON (PPP/XR), price level of USA GDPo in 2011=1",
+            "metric": "Price level of CCON (PPP/XR), price level of USA GDPo in 2005=1",
         },
         "pl_da": {
             "units": "Unitless",
-            "metric": "Price level of CDA (PPP/XR), price level of USA GDPo in 2011=1",
+            "metric": "Price level of CDA (PPP/XR), price level of USA GDPo in 2005=1",
         },
         "pl_gdpo": {
             "units": "Unitless",
-            "metric": "Price level of CGDPo (PPP/XR), price level of USA GDPo in 2011=1",
+            "metric": "Price level of CGDPo (PPP/XR), price level of USA GDPo in 2005=1",
         },
         "csh_c": {
             "units": "Unitless",
@@ -130,7 +130,6 @@ cols = {
         "csh_g": {
             "units": "Unitless",
             "metric": "Share of government consumption at current PPPs",
-            "factor": 1e6,
         },
         "csh_x": {
             "units": "Unitless",
@@ -146,27 +145,27 @@ cols = {
         },
         "pl_c": {
             "units": "Unitless",
-            "metric": "Price level of household consumption, price level of USA GDPo in 2011=1",
+            "metric": "Price level of household consumption, price level of USA GDPo in 2005=1",
         },
         "pl_i": {
             "units": "Unitless",
-            "metric": "Price level of capital formation, price level of USA GDPo in 2011=1",
+            "metric": "Price level of capital formation, price level of USA GDPo in 2005=1",
         },
         "pl_g": {
             "units": "Unitless",
-            "metric": "Price level of government consumption, price level of USA GDPo in 2011=1",
+            "metric": "Price level of government consumption, price level of USA GDPo in 2005=1",
         },
         "pl_x": {
             "units": "Unitless",
-            "metric": "Price level of exports, price level of USA GDPo in 2011=1",
+            "metric": "Price level of exports, price level of USA GDPo in 2005=1",
         },
         "pl_m": {
             "units": "Unitless",
-            "metric": "Price level of imports, price level of USA GDPo in 2011=1",
+            "metric": "Price level of imports, price level of USA GDPo in 2005=1",
         },
         "pl_k": {
             "units": "Unitless",
-            "metric": "Price level of the capital stock, price level of USA in 2011=1",
+            "metric": "Price level of the capital stock, price level of USA in 2005=1",
         },
 }
 
