@@ -180,13 +180,16 @@ with open("pwt90.csv", newline='') as f:
     first = True
 
     for row in reader:
+        data_retrieval_method = ", ".join([v + " = " + row[v]
+            for v in ['i_cig', 'i_xm', 'i_xr', 'i_outlier', 'cor_exp', 'statcap']
+            if row[v].strip()])
         for col in sorted(row):
             if row[col] and col in cols:
                 print("    " + ("" if first else ",") + "(" + ",".join([
                     mysql_quote(row["country"]),  # region
                     mysql_int(row["year"]),  # year
                     mysql_quote("http://www.rug.nl/ggdc/docs/pwt90.xlsx"),  # database_url
-                    mysql_quote(""),  # data_retrieval_method
+                    mysql_quote(data_retrieval_method),  # data_retrieval_method
                     mysql_quote(cols[col]["metric"]),  # metric
                     mysql_quote(cols[col]["units"]),  # units
                     mysql_float(row[col], cols[col].get("factor", 1)),  # value
