@@ -171,13 +171,12 @@ cols = {
 }
 
 
-print("""insert into data(region, year, database_url,
-         data_retrieval_method, metric, units, value, notes) values""")
-
+insert_line = "insert into data(region, year, database_url, data_retrieval_method, metric, units, value, notes) values"
+count = 0
+first = True
 
 with open("pwt90.csv", newline='') as f:
     reader = csv.DictReader(f)
-    first = True
 
     for row in reader:
         data_retrieval_method = ", ".join([v + " = " + row[v]
@@ -185,6 +184,8 @@ with open("pwt90.csv", newline='') as f:
             if row[v].strip()])
         for col in sorted(row):
             if row[col] and col in cols:
+                if first:
+                    print(insert_line)
                 print("    " + ("" if first else ",") + "(" + ",".join([
                     mysql_quote(row["country"]),  # region
                     mysql_int(row["year"]),  # year
@@ -196,4 +197,10 @@ with open("pwt90.csv", newline='') as f:
                     mysql_quote(""),  # notes
                 ]) + ")")
                 first = False
-    print(";")
+                count += 1
+                if count > 5000:
+                    count = 0
+                    first = True
+                    print(";")
+    if not first:
+        print(";")
