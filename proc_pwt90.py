@@ -7,13 +7,13 @@ from util import *
 
 cols = {
         "rgdpe": {
-            "units": "2011 US dollars",
-            "metric": "Expenditure-side real GDP",
+            "units": "2011 international dollars",
+            "metric": "Expenditure-side real GDP at chained PPPs",
             "factor": 1e6,
         },
         "rgdpo": {
-            "units": "2011 US dollars",
-            "metric": "Output-side real GDP",
+            "units": "2011 international dollars",
+            "metric": "Output-side real GDP at chained PPPs",
             "factor": 1e6,
         },
         "pop": {
@@ -31,8 +31,8 @@ cols = {
             "metric": "Average annual hours worked by persons engaged",
         },
         "hc": {
-            "units": "Index",
-            "metric": "Human capital index",
+            "units": "Unitless",
+            "metric": "Human capital index, based on years of schooling and returns to education",
         },
         "ccon": {
             "units": "2011 international dollar",
@@ -146,7 +146,7 @@ cols = {
         },
         "pl_c": {
             "units": "Unitless",
-            "metric": "Price level of household consumption,  price level of USA GDPo in 2011=1",
+            "metric": "Price level of household consumption, price level of USA GDPo in 2011=1",
         },
         "pl_i": {
             "units": "Unitless",
@@ -154,7 +154,7 @@ cols = {
         },
         "pl_g": {
             "units": "Unitless",
-            "metric": "Price level of government consumption,  price level of USA GDPo in 2011=1",
+            "metric": "Price level of government consumption, price level of USA GDPo in 2011=1",
         },
         "pl_x": {
             "units": "Unitless",
