@@ -15,6 +15,10 @@ Attribution for PWT 7.1:
 
 Alan Heston, Robert Summers and Bettina Aten, Penn World Table Version 7.1 Center for International Comparisons of Production, Income and Prices at the University of Pennsylvania, November 2012.
 
+Attribution for PWT 7.0:
+
+Alan Heston, Robert Summers and Bettina Aten, Penn World Table Version 7.0, Center for International Comparisons of Production, Income and Prices at the University of Pennsylvania, June 2011.
+
 ## See also
 
 - [maddison-project-data](https://github.com/riceissa/maddison-project-data), a
