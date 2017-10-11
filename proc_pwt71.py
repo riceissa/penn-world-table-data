@@ -1,9 +1,18 @@
 #!/usr/bin/env python3
 
 import csv
+import pycountry
+import sys
 
 from util import *
 
+# These are the countries that pycountry does not have under alpha3
+mycountry = {
+        "GER": "Germany",
+        "ROM": "Romania",
+        "ZAR": "Zaire",
+        "CH2": "China Version 2",
+}
 
 cols = {
         "tcgdp": {
@@ -138,12 +147,16 @@ with open("pwt71_wo_country_names_wo_g_vars.csv", newline='') as f:
     reader = csv.DictReader(f)
 
     for row in reader:
+        try:
+            country = pycountry.countries.get(alpha3=row["isocode"]).name
+        except KeyError:
+            country = mycountry[row["isocode"]]
         for col in sorted(row):
             if row[col] and col in cols:
                 if first:
                     print(insert_line)
                 print("    " + ("" if first else ",") + "(" + ",".join([
-                    mysql_quote(row["isocode"]),  # region
+                    mysql_quote(country),  # region
                     mysql_int(row["year"]),  # year
                     mysql_quote("http://www.rug.nl/ggdc/docs/pwt71_11302012version.zip"),  # database_url
                     mysql_quote(""),  # data_retrieval_method
