@@ -19,13 +19,13 @@ cols = {
             "units": "Unitless",
             "metric": "Consumption Share of CGPD",
         },
-        "cg": {
-            "units": "Unitless",
-            "metric": "Government Share of CGDP",
-        },
         "ci": {
             "units": "Unitless",
             "metric": "Investment Share of CGDP",
+        },
+        "cg": {
+            "units": "Unitless",
+            "metric": "Government Share of CGDP",
         },
         "p": {
             "units": "Unitless",
@@ -50,6 +50,10 @@ cols = {
         "cgnp": {
             "units": "Unitless",
             "metric": "Ratio of GNP to GDP",
+        },
+        "csave": {
+            "units": "international dollar?",
+            "metric": "Current Savings",
         },
         "y": {
             "units": "Unitless",
