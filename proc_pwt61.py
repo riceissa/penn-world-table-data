@@ -6,6 +6,7 @@ import sys
 from util import *
 
 
+# Variable explanations at http://www.rug.nl/ggdc/docs/appendix_pwt_61.pdf
 cols = {
         "PPP": {
             "units": "Unitless",
