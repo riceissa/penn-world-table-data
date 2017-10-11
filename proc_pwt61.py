@@ -52,8 +52,8 @@ cols = {
             "metric": "Ratio of GNP to GDP",
         },
         "csave": {
-            "units": "international dollar?",
-            "metric": "Current Savings",
+            "units": "Unitless",
+            "metric": "Current Savings (%)",
         },
         "y": {
             "units": "Unitless",
