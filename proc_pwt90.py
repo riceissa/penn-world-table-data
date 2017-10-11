@@ -7,12 +7,12 @@ from util import *
 
 cols = {
         "rgdpe": {
-            "units": "2011 international dollars",
+            "units": "2011 international dollar",
             "metric": "Expenditure-side real GDP at chained PPPs",
             "factor": 1e6,
         },
         "rgdpo": {
-            "units": "2011 international dollars",
+            "units": "2011 international dollar",
             "metric": "Output-side real GDP at chained PPPs",
             "factor": 1e6,
         },
