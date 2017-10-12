@@ -39,3 +39,4 @@ Alan Heston, Robert Summers and Bettina Aten, Penn World Table, Center for Inter
 
 - [maddison-project-data](https://github.com/riceissa/maddison-project-data), a
   similar project for Maddison Project data that uses the same database schema
+- [world development indicators](https://github.com/riceissa/world-development-indicators)
