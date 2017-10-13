@@ -16,3 +16,8 @@ jpn = df[(df['metric'] == 'Component shares of CGDP: Consumption') & (df['region
 plt.plot(jpn.year, jpn.value)
 
 plt.show()
+
+
+a = df[df.metric == 'Expenditure-side real GDP at chained PPPs']
+a.pivot(index='year', columns='region', values='value').plot(legend=False)
+plt.show()
