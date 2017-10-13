@@ -1,0 +1,1 @@
+select sum(value), region, year from data where database_url = 'http://www.rug.nl/ggdc/docs/pwt56_forweb.xls' and (metric = 'Component shares of CGDP: Consumption' or metric = 'Component shares of CGDP: Government' or 'Component shares of CGDP: Investment') group by region, year;
