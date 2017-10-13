@@ -21,3 +21,7 @@ plt.show()
 a = df[df.metric == 'Expenditure-side real GDP at chained PPPs']
 a.pivot(index='year', columns='region', values='value').plot(legend=False)
 plt.show()
+
+# one-liner; change metric to plot a different metric, each country is a
+# separate line plot
+metric = 'Output-side real GDP at chained PPPs'; df[df.metric == metric].pivot(index='year', columns='region', values='value').plot(legend=False, title=metric); plt.show()
