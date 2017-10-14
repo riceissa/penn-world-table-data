@@ -2,6 +2,9 @@
 
 Penn World Table data wrangling.
 
+For the database schema, see the
+[one for the Maddison repo](https://github.com/riceissa/maddison-project-data/blob/master/schema.sql).
+
 ## License
 
 CC0.
