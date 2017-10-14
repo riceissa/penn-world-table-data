@@ -148,7 +148,12 @@ with open("pwt71_wo_country_names_wo_g_vars.csv", newline='') as f:
 
     for row in reader:
         try:
-            country = pycountry.countries.get(alpha3=row["isocode"]).name
+            # Older versions of pycountry use "alpha3" while newer ones use
+            # "alpha_3", so check which one to use
+            if "alpha3" in list(pycountry.countries)[0].__dir__():
+                country = pycountry.countries.get(alpha3=row["isocode"]).name
+            else:
+                country = pycountry.countries.get(alpha_3=row["isocode"]).name
         except KeyError:
             country = mycountry[row["isocode"]]
         for col in sorted(row):
