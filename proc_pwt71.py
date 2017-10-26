@@ -139,7 +139,7 @@ cols = {
 }
 
 
-insert_line = "insert into data(region, year, database_url, data_retrieval_method, metric, units, value, notes) values"
+insert_line = "insert into data(region, odate, database_url, data_retrieval_method, metric, units, value, notes) values"
 count = 0
 first = True
 
@@ -162,7 +162,7 @@ with open("pwt71_wo_country_names_wo_g_vars.csv", newline='') as f:
                     print(insert_line)
                 print("    " + ("" if first else ",") + "(" + ",".join([
                     mysql_quote(country),  # region
-                    mysql_int(row["year"]),  # year
+                    mysql_string_date(row["year"]),  # odate
                     mysql_quote("http://www.rug.nl/ggdc/docs/pwt71_11302012version.zip"),  # database_url
                     mysql_quote(""),  # data_retrieval_method
                     mysql_quote(cols[col]["metric"]),  # metric
