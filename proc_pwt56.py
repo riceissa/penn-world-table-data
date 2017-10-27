@@ -129,7 +129,7 @@ cols = {
 }
 
 
-insert_line = "insert into data(region, year, database_url, data_retrieval_method, metric, units, value, notes) values"
+insert_line = "insert into data(region, odate, database_url, data_retrieval_method, metric, units, value, notes) values"
 count = 0
 first = True
 
@@ -143,7 +143,7 @@ with open("pwt56_forweb.csv", newline='') as f:
                     print(insert_line)
                 print("    " + ("" if first else ",") + "(" + ",".join([
                     mysql_quote(row["Country"]),  # region
-                    mysql_int(row["Year"]),  # year
+                    mysql_string_date(row["Year"]),  # odate
                     mysql_quote("http://www.rug.nl/ggdc/docs/pwt56_forweb.xls"),  # database_url
                     mysql_quote(""),  # data_retrieval_method
                     mysql_quote(cols[col]["metric"]),  # metric
