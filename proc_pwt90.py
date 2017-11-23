@@ -2,7 +2,7 @@
 
 import csv
 
-from util import *
+from devec_sql_common import *
 
 
 cols = {

@@ -3,7 +3,7 @@
 import csv
 import sys
 
-from util import *
+from devec_sql_common import *
 
 
 # Variable explanations at

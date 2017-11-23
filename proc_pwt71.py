@@ -4,7 +4,7 @@ import csv
 import pycountry
 import sys
 
-from util import *
+from devec_sql_common import *
 
 # These are the countries that pycountry does not have under alpha3
 mycountry = {
