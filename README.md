@@ -5,6 +5,16 @@ Penn World Table data wrangling.
 For the database schema, see the
 [one for the Maddison repo](https://github.com/riceissa/maddison-project-data/blob/master/schema.sql).
 
+To generate the SQL files, the scripts in this repository require the
+[`devec_sql_common`](https://github.com/riceissa/devec_sql_common)
+Python package.  To install, run:
+
+```bash
+git clone https://github.com/riceissa/devec_sql_common
+cd devec_sql_common
+pip3 install -e .
+```
+
 ## License
 
 CC0.
