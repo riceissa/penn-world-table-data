@@ -186,7 +186,7 @@ with open("pwt90.csv", newline='') as f:
                 if first:
                     print(insert_line)
                 print("    " + ("" if first else ",") + "(" + ",".join([
-                    mysql_quote(row["country"]),  # region
+                    mysql_quote(region_normalized(row["country"])),  # region
                     mysql_string_date(row["year"]),  # odate
                     mysql_quote("http://www.rug.nl/ggdc/docs/pwt90.xlsx"),  # database_url
                     mysql_quote(data_retrieval_method),  # data_retrieval_method
