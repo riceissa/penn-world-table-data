@@ -183,10 +183,19 @@ with open("pwt81.csv", newline='') as f:
             if row[v].strip()])
         for col in sorted(row):
             if row[col] and col in cols:
+                country = region_normalized(row["country"])
+
+                # Zimbabwe has two estimates in PWT 8.1 for years 2009-2011.
+                # One has currency_unit "US Dollar" and the other has "Zimbabwe
+                # Dollar".
+                if (country.lower() == "zimbabwe" and
+                        row["currency_unit"] == "Zimbabwe Dollar"):
+                    country = "Zimbabwe (alternative)"
+
                 if first:
                     print(insert_line)
                 print("    " + ("" if first else ",") + "(" + ",".join([
-                    mysql_quote(region_normalized(row["country"])),  # region
+                    mysql_quote(country),  # region
                     mysql_string_date(row["year"]),  # odate
                     mysql_quote("http://www.rug.nl/ggdc/docs/pwt81.xlsx"),  # database_url
                     mysql_quote(data_retrieval_method),  # data_retrieval_method
