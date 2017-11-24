@@ -80,7 +80,7 @@ cols = {
         },
         "RGDPEA": {
             "units": "Unitless",
-            "metric": "Price levels (PPP/Exchange Rate): Components: Consumption",
+            "metric": "Real GDP chain per equivalent adult",
         },
         "RGDPW": {
             "units": "? per person",
