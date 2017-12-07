@@ -5,6 +5,8 @@ import sys
 
 from devec_sql_common import *
 
+print_insert_header()
+
 
 cols = {
         "PPP": {
@@ -128,3 +130,6 @@ with open("pwt62_data.csv", newline='') as f:
                     print(";")
     if not first:
         print(";")
+
+
+print_insert_footer()

@@ -5,6 +5,8 @@ import sys
 
 from devec_sql_common import *
 
+print_insert_header()
+
 
 cols = {
         "tcgdp": {
@@ -161,3 +163,6 @@ with open("pwt70_w_country_names.csv", newline='') as f:
                     print(";")
     if not first:
         print(";")
+
+
+print_insert_footer()

@@ -6,6 +6,8 @@ import sys
 
 from devec_sql_common import *
 
+print_insert_header()
+
 # These are the countries that pycountry does not have under alpha3
 mycountry = {
         "GER": "Germany",
@@ -178,3 +180,6 @@ with open("pwt71_wo_country_names_wo_g_vars.csv", newline='') as f:
                     print(";")
     if not first:
         print(";")
+
+
+print_insert_footer()

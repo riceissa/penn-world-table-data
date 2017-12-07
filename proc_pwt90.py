@@ -4,6 +4,8 @@ import csv
 
 from devec_sql_common import *
 
+print_insert_header()
+
 
 cols = {
         "rgdpe": {
@@ -203,3 +205,6 @@ with open("pwt90.csv", newline='') as f:
                     print(";")
     if not first:
         print(";")
+
+
+print_insert_footer()

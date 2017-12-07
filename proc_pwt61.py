@@ -5,6 +5,8 @@ import sys
 
 from devec_sql_common import *
 
+print_insert_header()
+
 
 # Variable explanations at http://www.rug.nl/ggdc/docs/appendix_pwt_61.pdf
 cols = {
@@ -133,3 +135,6 @@ with open("pwt61_data.csv", newline='') as f:
                     print(";")
     if not first:
         print(";")
+
+
+print_insert_footer()

@@ -5,6 +5,8 @@ import sys
 
 from devec_sql_common import *
 
+print_insert_header()
+
 
 # Variable explanations at
 # http://www.rug.nl/ggdc/docs/pwt56appendix.pdf
@@ -159,3 +161,6 @@ with open("pwt56_forweb.csv", newline='') as f:
                     print(";")
     if not first:
         print(";")
+
+
+print_insert_footer()
