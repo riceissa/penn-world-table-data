@@ -160,7 +160,7 @@ with open("pwt71_wo_country_names_wo_g_vars.csv", newline='') as f:
             if row[col] and col in cols:
                 if first:
                     print(insert_line)
-                print("    " + ("" if first else ",") + "(" + ",".join([
+                print("    " + ("" if first else ",") + "(" + uniq_join([
                     mysql_quote(region_normalized(country)),  # region
                     mysql_string_date(row["year"]),  # odate
                     mysql_quote("http://www.rug.nl/ggdc/docs/pwt71_11302012version.zip"),  # database_url
