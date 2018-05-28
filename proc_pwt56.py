@@ -11,10 +11,10 @@ print_insert_header()
 # Variable explanations at
 # http://www.rug.nl/ggdc/docs/pwt56appendix.pdf
 cols = {
-        ""
         "POP": {
             "units": "People",
             "metric": "Population",
+            "factor": 1000,
         },
         "RGDPCH": {
             "units": "?",
