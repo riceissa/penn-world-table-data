@@ -15,6 +15,30 @@ cd devec_sql_common
 pip3 install -e .
 ```
 
+### Regenerating the SQL files
+
+The SQL files are not included as part of the repository due to their
+size. Here are the commands to regenerate them:
+
+```
+./proc_pwt56.py > pwt56.sql
+./proc_pwt61.py > pwt61.sql
+./proc_pwt62.py > pwt62.sql
+./proc_pwt63.py > pwt63.sql
+./proc_pwt70.py > pwt70.sql
+./proc_pwt71.py > pwt71.sql
+./proc_pwt80.py > pwt80.sql
+./proc_pwt81.py > pwt81.sql
+./proc_pwt90.py > pwt90.sql
+```
+
+All the target files are already in [.gitignore](.gitignore) so your
+git status will remain clean after you regenerate them.
+
+To test experimental changes to the scripts, you can send the results
+to a temporary file location and then compare the output with the
+official output.
+
 ## License
 
 CC0.
