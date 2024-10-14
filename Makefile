@@ -2,7 +2,7 @@ MYSQL_ARGS=
 DATABASE=devecondata
 
 .PHONY: all
-all: pwt56.sql pwt61.sql pwt62.sql pwt63.sql pwt70.sql pwt71.sql pwt80.sql pwt81.sql pwt90.sql
+all: pwt56.sql pwt61.sql pwt62.sql pwt63.sql pwt70.sql pwt80.sql pwt81.sql pwt90.sql pwt71.sql
 
 .PHONY: read
 read:
@@ -11,10 +11,10 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < pwt62.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < pwt63.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < pwt70.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < pwt71.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < pwt80.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < pwt81.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < pwt90.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < pwt71.sql
 
 pwt56.sql:
 	./proc_pwt56.py > pwt56.sql
