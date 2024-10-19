@@ -156,7 +156,7 @@ with open("pwt71_wo_country_names_wo_g_vars.csv", newline='') as f:
                 country = pycountry.countries.get(alpha3=row["isocode"]).name
             else:
                 country = pycountry.countries.get(alpha_3=row["isocode"]).name
-        except KeyError:
+        except (KeyError, AttributeError):
             country = mycountry[row["isocode"]]
         for col in sorted(row):
             if row[col] and col in cols:
